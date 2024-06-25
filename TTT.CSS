@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lemonchiffon;
+}
+
+.game-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: greenyellow;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.cell {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #f7f7f7;
+}
+
+.cell:active {
+    background-color: #eee;
+}
+
+.cell.x {
+    color: #33ccff; /* neon blue */
+    text-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff, 0 0 30px #33ccff;
+    animation: neon-glow 1s infinite;
+}
+
+.cell.o {
+    color: #ff99cc; /* neon pink */
+    text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff99cc, 0 0 30px #ff99cc;
+    animation: neon-glow 1s infinite;
+}
+.winning-cell {
+    animation: confetti 1s infinite;
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
